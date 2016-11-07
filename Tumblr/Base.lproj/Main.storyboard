@@ -6,6 +6,34 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="liW-6E-iLl">
+            <objects>
+                <viewController id="e54-kI-6gI" userLabel="Home View Controller" customClass="HomeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u4M-IA-RnV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="launch" id="qxh-k5-FYM" userLabel="BackgroundImageView">
+                                <frame key="frameInset" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_spinner" id="p6e-1e-HcN" userLabel="SpinnerImageView">
+                                <frame key="frameInset" minX="87" minY="179" width="147" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="home_overlay" id="FCx-at-PBd" userLabel="TextImageView">
+                                <frame key="frameInset" minY="289" width="320" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YeU-uD-hAl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-647" y="899"/>
+        </scene>
         <!--Tap Bar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -34,7 +62,7 @@
                                         <frame key="frameInset" minX="135" minY="5" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="compose_button"/>
-                                        <state key="selected" image="compose_button"/>
+                                        <state key="selected" image="compose_selected_icon"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F7C-7j-7Ai" userLabel="Button Account">
                                         <frame key="frameInset" minX="213" minY="5" width="35" height="35"/>
@@ -71,8 +99,12 @@
         <image name="account_icon" width="35" height="35"/>
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="compose_selected_icon" width="50" height="35"/>
         <image name="home_icon" width="35" height="35"/>
+        <image name="home_overlay" width="320" height="100"/>
         <image name="home_selected_icon" width="35" height="35"/>
+        <image name="home_spinner" width="146" height="146"/>
+        <image name="launch" width="320" height="524"/>
         <image name="search_icon" width="35" height="35"/>
         <image name="search_selected_icon" width="35" height="35"/>
         <image name="trending_icon" width="35" height="35"/>

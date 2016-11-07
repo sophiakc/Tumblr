@@ -14,6 +14,7 @@
 		7E7215851DCC157E00A2ADCC /* TumblrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7215841DCC157E00A2ADCC /* TumblrTests.swift */; };
 		7E7215901DCC157E00A2ADCC /* TumblrUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E72158F1DCC157E00A2ADCC /* TumblrUITests.swift */; };
 		7E8325BA1DD1093D00D042DC /* TapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325B91DD1093D00D042DC /* TapBarViewController.swift */; };
+		7E8325BC1DD1128500D042DC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325BB1DD1128500D042DC /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		7E72158F1DCC157E00A2ADCC /* TumblrUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TumblrUITests.swift; sourceTree = "<group>"; };
 		7E7215911DCC157E00A2ADCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E8325B91DD1093D00D042DC /* TapBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapBarViewController.swift; sourceTree = "<group>"; };
+		7E8325BB1DD1128500D042DC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				7E8325B91DD1093D00D042DC /* TapBarViewController.swift */,
+				7E8325BB1DD1128500D042DC /* HomeViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				7E8325BA1DD1093D00D042DC /* TapBarViewController.swift in Sources */,
 				7E7215701DCC157E00A2ADCC /* AppDelegate.swift in Sources */,
+				7E8325BC1DD1128500D042DC /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
