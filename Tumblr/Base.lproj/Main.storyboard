@@ -127,6 +127,38 @@
             </objects>
             <point key="canvasLocation" x="708" y="893"/>
         </scene>
+        <!--Trending View Controller-->
+        <scene sceneID="iKr-Hz-QhN">
+            <objects>
+                <viewController id="AXe-UQ-c5G" userLabel="Trending View Controller" customClass="TrendingViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" misplaced="YES" id="1Tz-bv-582">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1209"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="qkn-cF-7oI">
+                                <frame key="frameInset" width="320" height="1209"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trending_feed" id="hIF-sb-wlj">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1209"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1209"/>
+                    <connections>
+                        <outlet property="imageView" destination="hIF-sb-wlj" id="Si8-Gg-xP6"/>
+                        <outlet property="scrollView" destination="qkn-cF-7oI" id="zyP-VF-wNw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XVt-eJ-HVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1162" y="1220"/>
+        </scene>
         <!--Tap Bar View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -207,6 +239,7 @@
         <image name="search_icon" width="35" height="35"/>
         <image name="search_selected_icon" width="35" height="35"/>
         <image name="text_icon" width="75" height="95"/>
+        <image name="trending_feed" width="320" height="1217"/>
         <image name="trending_icon" width="35" height="35"/>
         <image name="trending_selected_icon" width="35" height="35"/>
         <image name="video_icon" width="75" height="95"/>
