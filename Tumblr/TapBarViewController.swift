@@ -31,7 +31,7 @@ class TapBarViewController: UIViewController {
     
     // Define a variable for an array to hold the ViewControllers
     var viewControllers: [UIViewController]!
-    
+    var selectedIndex: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,90 +39,73 @@ class TapBarViewController: UIViewController {
         let main = UIStoryboard(name: "Main", bundle: nil)
         
         
-        // ViewController: Home
+        // instantiate each ViewController by referencing main and the particular ViewController's Storyboard ID
+        // Reminder: instantiate == performing segue
         homeViewController = main.instantiateViewController(withIdentifier: "HomeViewController")
-        homeViewController.view.frame = contentView.bounds
-        addChildViewController(homeViewController)
-            // take the view and add it in my contentView
-        contentView.addSubview(homeViewController.view)
-        
-        // ViewController: Search
         searchViewController = main.instantiateViewController(withIdentifier: "SearchViewController")
-        searchViewController.view.frame = contentView.bounds
-        addChildViewController(searchViewController)
-        contentView.addSubview(searchViewController.view)
-        
-        // ViewController: Compose
         composeViewController = main.instantiateViewController(withIdentifier: "ComposeViewController")
-        composeViewController.view.frame = contentView.bounds
-        addChildViewController(composeViewController)
-        contentView.addSubview(composeViewController.view)
-        
-        // ViewController: Account
         accountViewController = main.instantiateViewController(withIdentifier: "AccountViewController")
-        accountViewController.view.frame = contentView.bounds
-        addChildViewController(accountViewController)
-        contentView.addSubview(accountViewController.view)
-        
-        // ViewController: Activity
         activityViewController = main.instantiateViewController(withIdentifier: "ActivityViewController")
-        activityViewController.view.frame = contentView.bounds
-        addChildViewController(activityViewController)
-        contentView.addSubview(activityViewController.view)
+        
+        viewControllers = [homeViewController, searchViewController, composeViewController, accountViewController, activityViewController]
+        
+        
+        // set the button state and call the didPressTab method. We will plug in buttons[selectedIndex] as arguments in the didPressTab method to specify the initial button, since we haven't actually "tapped" a button yet and there is no sender to access.
+        buttons[selectedIndex].isSelected = true
+        didPressTab(buttons[selectedIndex])
         
         
     }
-    
-    
-    @IBAction func didTapHome(_ sender: UIButton) {
-        
-    }
-    
-    
-    @IBAction func didTapSearch(_ sender: UIButton) {
-    }
-    
-    @IBAction func didTapCompose(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func didTapAccount(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func didTapActivity(_ sender: UIButton) {
-    }
-    
 
     
-
+    @IBAction func didPressTab(_ sender: UIButton) {
+        
+        
+        //----------- Get Access to the Previous and Current Tab Button
+        // keep track of the previous button
+        let previousIndex = selectedIndex
+        
+        // tag value of which ever button was tapped
+        selectedIndex = sender.tag
+        
+        
+        
+        
+        //----------- Remove the Previous ViewController and Set Button State
+        // access previous button and set it to the non-selected state
+        buttons[previousIndex].isSelected = false
+        
+        // use previousIndex to access the previous ViewController from the viewControllers array
+        let previousVC = viewControllers[previousIndex]
+        
+        // Remove the previous ViewController
+        previousVC.willMove(toParentViewController: nil)
+        previousVC.view.removeFromSuperview()
+        previousVC.removeFromParentViewController()
+        
+        
+        
+        
+        //----------- Add the New ViewController and Set Button State.
+        // access your current selected button and set it to the selected state
+        sender.isSelected = true
+        
+        // use selectedIndex to access the current ViewController from the viewControllers array
+        let vc = viewControllers[selectedIndex]
+        
+        // Add the new ViewController.  (Calls the viewWillAppear method of the ViewController you are adding)
+        addChildViewController(vc)
+        
+        // Adjust the size of the ViewController view you are adding to match the contentView of your tabBarViewController and add it as a subView of the contentView.
+        vc.view.frame = contentView.bounds
+        contentView.addSubview(vc.view)
+        
+        // Call the viewDidAppear method of the ViewController you are adding using didMove(toParentViewController: self).
+        vc.didMove(toParentViewController: self)
+        
+        
+        
+        
+    }
+ 
 }
-
-
-
-//@IBAction func didTapRedButton(_ sender: AnyObject) {
-//    
-//    //        orangeViewController.view.removeFromSuperview()
-//    //        orangeViewController.willMove(toParentViewController: nil)
-//    //        orangeViewController.removeFromParentViewController()
-//    //
-//    //        addChildViewController(redViewController)
-//    //        containerView.addSubview(redViewController.view)
-//    //        redViewController.didMove(toParentViewController: self)
-//    
-//    // how much we scroll from origin position
-//    containerView.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
-//}
-//
-//@IBAction func didTapOrange(_ sender: AnyObject) {
-//    containerView.setContentOffset(CGPoint(x: containerView.frame.size.width * 2, y: 0) , animated: true)
-//}
-//
-//@IBAction func didTapGreenButton(_ sender: AnyObject) {
-//    containerView.setContentOffset(CGPoint(x: containerView.frame.size.width, y: 0) , animated: true)
-//}
-//
-//
-//
-//
-//}
