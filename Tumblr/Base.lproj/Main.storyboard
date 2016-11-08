@@ -68,8 +68,8 @@
         <!--Compose View Controller-->
         <scene sceneID="6xM-aB-iGL">
             <objects>
-                <viewController storyboardIdentifier="ComposeViewController" id="5Cw-fe-Bmk" userLabel="Compose View Controller" customClass="ComposeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="TJB-Hi-FkN">
+                <viewController storyboardIdentifier="ComposeViewController" modalPresentationStyle="overCurrentContext" id="5Cw-fe-Bmk" userLabel="Compose View Controller" customClass="ComposeViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" alpha="0.90000000000000002" contentMode="scaleToFill" id="TJB-Hi-FkN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -111,7 +111,7 @@
                                 <state key="normal" title="Nevermind"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1803921568627451" green="0.27058823529411763" blue="0.36078431372549019" alpha="0.59856690950920244" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1803921568627451" green="0.27058823529411763" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vO7-7P-BbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -221,16 +221,17 @@
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YxB-a8-VLx"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5iH-Mt-BNi" userLabel="Button Compose">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5iH-Mt-BNi" userLabel="Button Compose">
                                         <frame key="frameInset" minX="135" minY="5" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="compose_button"/>
                                         <state key="selected" image="compose_selected_icon"/>
                                         <connections>
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9M-Db-OB8"/>
+                                            <segue destination="5Cw-fe-Bmk" kind="modal" identifier="" animates="NO" id="4oo-v6-yB8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F7C-7j-7Ai" userLabel="Button Account">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F7C-7j-7Ai" userLabel="Button Account">
                                         <frame key="frameInset" minX="213" minY="5" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="account_icon"/>
@@ -239,7 +240,7 @@
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Jo-F3-TgI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="4" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qgi-RT-nQB" userLabel="Button Activity">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qgi-RT-nQB" userLabel="Button Activity">
                                         <frame key="frameInset" minX="273" minY="6" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="trending_icon"/>

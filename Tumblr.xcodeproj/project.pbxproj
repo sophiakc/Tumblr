@@ -19,6 +19,9 @@
 		7E8325C01DD11B7E00D042DC /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325BF1DD11B7E00D042DC /* ComposeViewController.swift */; };
 		7E8325C21DD11C2800D042DC /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325C11DD11C2800D042DC /* AccountViewController.swift */; };
 		7E8325C61DD15EB800D042DC /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325C51DD15EB800D042DC /* ActivityViewController.swift */; };
+		7E8325CA1DD1D04F00D042DC /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325C71DD1D04F00D042DC /* BaseTransition.swift */; };
+		7E8325CB1DD1D04F00D042DC /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325C81DD1D04F00D042DC /* Common.swift */; };
+		7E8325CC1DD1D04F00D042DC /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8325C91DD1D04F00D042DC /* FadeTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		7E8325BF1DD11B7E00D042DC /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		7E8325C11DD11C2800D042DC /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7E8325C51DD15EB800D042DC /* ActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		7E8325C71DD1D04F00D042DC /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
+		7E8325C81DD1D04F00D042DC /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		7E8325C91DD1D04F00D042DC /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 				7E8325B81DD104BD00D042DC /* ViewControllers */,
 				7E72156F1DCC157E00A2ADCC /* AppDelegate.swift */,
 				7E7215731DCC157E00A2ADCC /* Main.storyboard */,
+				7E8325C71DD1D04F00D042DC /* BaseTransition.swift */,
+				7E8325C81DD1D04F00D042DC /* Common.swift */,
+				7E8325C91DD1D04F00D042DC /* FadeTransition.swift */,
 				7E7215761DCC157E00A2ADCC /* Assets.xcassets */,
 				7E7215781DCC157E00A2ADCC /* LaunchScreen.storyboard */,
 				7E72157B1DCC157E00A2ADCC /* Info.plist */,
@@ -286,7 +295,10 @@
 				7E8325BA1DD1093D00D042DC /* TapBarViewController.swift in Sources */,
 				7E8325C21DD11C2800D042DC /* AccountViewController.swift in Sources */,
 				7E7215701DCC157E00A2ADCC /* AppDelegate.swift in Sources */,
+				7E8325CB1DD1D04F00D042DC /* Common.swift in Sources */,
 				7E8325C61DD15EB800D042DC /* ActivityViewController.swift in Sources */,
+				7E8325CC1DD1D04F00D042DC /* FadeTransition.swift in Sources */,
+				7E8325CA1DD1D04F00D042DC /* BaseTransition.swift in Sources */,
 				7E8325BE1DD114FF00D042DC /* SearchViewController.swift in Sources */,
 				7E8325BC1DD1128500D042DC /* HomeViewController.swift in Sources */,
 			);

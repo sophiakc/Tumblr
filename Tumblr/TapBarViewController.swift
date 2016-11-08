@@ -33,6 +33,10 @@ class TapBarViewController: UIViewController {
     var viewControllers: [UIViewController]!
     var selectedIndex: Int = 0
     
+    var fadeTransition: FadeTransition!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,11 +47,10 @@ class TapBarViewController: UIViewController {
         // Reminder: instantiate == performing segue
         homeViewController = main.instantiateViewController(withIdentifier: "HomeViewController")
         searchViewController = main.instantiateViewController(withIdentifier: "SearchViewController")
-        composeViewController = main.instantiateViewController(withIdentifier: "ComposeViewController")
         accountViewController = main.instantiateViewController(withIdentifier: "AccountViewController")
         activityViewController = main.instantiateViewController(withIdentifier: "ActivityViewController")
         
-        viewControllers = [homeViewController, searchViewController, composeViewController, accountViewController, activityViewController]
+        viewControllers = [homeViewController, searchViewController, accountViewController, activityViewController]
         
         
         // set the button state and call the didPressTab method. We will plug in buttons[selectedIndex] as arguments in the didPressTab method to specify the initial button, since we haven't actually "tapped" a button yet and there is no sender to access.
@@ -102,10 +105,30 @@ class TapBarViewController: UIViewController {
         
         // Call the viewDidAppear method of the ViewController you are adding using didMove(toParentViewController: self).
         vc.didMove(toParentViewController: self)
-        
-        
-        
-        
+
     }
- 
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController
+        let destinationViewController = segue.destination
+        
+        
+        // Set the modal presentation style of your destinationViewController to be custom
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 1.5
+        print("fadeIn called")
+    }
+    
+    
+    
 }
