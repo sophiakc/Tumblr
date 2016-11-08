@@ -1,5 +1,5 @@
 //
-//  AccountViewController.swift
+//  ActivityViewController.swift
 //  Tumblr
 //
 //  Created by Sophia KC on 07/11/2016.
@@ -8,13 +8,13 @@
 
 import UIKit
 
-class AccountViewController: UIViewController {
+class ActivityViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         
     }
-    
+
     
 }
