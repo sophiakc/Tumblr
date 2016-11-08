@@ -10,12 +10,12 @@ Purpose: leverage animations and gestures to create custom navigation. We're goi
 
 Submitted by: [Sophia Kecir Camper](https://github.com/sophiakc)
 
-Total time spent: **** cumulated hours
+Total time spent: **10** cumulated hours
 
 ## Required User Stories
 
-* [ ] Tapping on Home, Search, Account, or Trending should show the respective screen and highlight the tab bar button.
-* [ ] Compose button should modally present the compose screen.
+* [X] Tapping on Home, Search, Account, or Activity should show the respective screen and highlight the tab bar button.
+* [X] Compose button should modally present the compose screen.
 
 
 ## Optional User Stories
