@@ -109,6 +109,9 @@
                                 <color key="backgroundColor" red="0.20784313725490194" green="0.30588235294117649" blue="0.38431372549019605" alpha="0.59856690950920244" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <state key="normal" title="Nevermind"/>
+                                <connections>
+                                    <action selector="didTapNevermind:" destination="5Cw-fe-Bmk" eventType="touchUpInside" id="m8E-hE-h6l"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1803921568627451" green="0.27058823529411763" blue="0.36078431372549019" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -228,7 +231,7 @@
                                         <state key="selected" image="compose_selected_icon"/>
                                         <connections>
                                             <action selector="didPressTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S9M-Db-OB8"/>
-                                            <segue destination="5Cw-fe-Bmk" kind="modal" identifier="" animates="NO" id="4oo-v6-yB8"/>
+                                            <segue destination="5Cw-fe-Bmk" kind="modal" identifier="" id="4oo-v6-yB8"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F7C-7j-7Ai" userLabel="Button Account">

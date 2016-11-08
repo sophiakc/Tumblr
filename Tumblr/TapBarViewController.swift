@@ -125,7 +125,7 @@ class TapBarViewController: UIViewController {
         destinationViewController.transitioningDelegate = fadeTransition
         
         // Adjust the transition duration. (seconds)
-        fadeTransition.duration = 1.5
+        fadeTransition.duration = 1.0
         print("fadeIn called")
     }
     
