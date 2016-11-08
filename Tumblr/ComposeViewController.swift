@@ -10,8 +10,14 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    
+    
+    // Variables
+    var buttons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         
@@ -20,7 +26,11 @@ class ComposeViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-    }
+        // Hidden state
+//        for button in buttons {
+//            button.transform = CGAffineTransform(translationX: 0, y: view.frame.height - button.frame.origin.y)
+        }
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -28,7 +38,7 @@ class ComposeViewController: UIViewController {
         
     }
     
-    
+
     @IBAction func didTapNevermind(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
