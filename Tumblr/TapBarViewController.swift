@@ -14,6 +14,8 @@ class TapBarViewController: UIViewController {
     
     // behaves like a container
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet var buttons: [UIButton]!
+    
     
     // Outlets for the VC to be presented in contentView
     
@@ -26,6 +28,9 @@ class TapBarViewController: UIViewController {
     var accountViewController: UIViewController!
     var activityViewController: UIViewController!
     var tapBarViewController: UIViewController!
+    
+    // Define a variable for an array to hold the ViewControllers
+    var viewControllers: [UIViewController]!
     
     
     override func viewDidLoad() {

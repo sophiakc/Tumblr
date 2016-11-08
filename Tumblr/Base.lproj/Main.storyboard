@@ -64,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ell-SN-Xe6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-190" y="1205"/>
+            <point key="canvasLocation" x="-190" y="1234"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="6xM-aB-iGL">
@@ -164,7 +164,7 @@
                                 </state>
                             </button>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" id="5Dh-6t-Znm">
-                                <frame key="frameInset" minX="-1" height="44"/>
+                                <frame key="frameInset" minX="-1" height="44" maxX="-1"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.30588235289999999" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <textAttributes key="titleTextAttributes">
@@ -225,7 +225,7 @@
                                             <action selector="didTapSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Izt-7W-ghp"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5iH-Mt-BNi" userLabel="Button Compose">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5iH-Mt-BNi" userLabel="Button Compose">
                                         <frame key="frameInset" minX="135" minY="5" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="compose_button"/>
@@ -263,6 +263,11 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="olH-au-US9" id="vDx-q3-o3l"/>
+                        <outletCollection property="buttons" destination="xWX-uz-jtF" collectionClass="NSMutableArray" id="Wrg-7N-BeP"/>
+                        <outletCollection property="buttons" destination="Hz7-K1-03Z" collectionClass="NSMutableArray" id="ach-B3-KaN"/>
+                        <outletCollection property="buttons" destination="5iH-Mt-BNi" collectionClass="NSMutableArray" id="IGe-4V-cAe"/>
+                        <outletCollection property="buttons" destination="F7C-7j-7Ai" collectionClass="NSMutableArray" id="P19-t8-Ppu"/>
+                        <outletCollection property="buttons" destination="qgi-RT-nQB" collectionClass="NSMutableArray" id="8i7-t0-7kx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
